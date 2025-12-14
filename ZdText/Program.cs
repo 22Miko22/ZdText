@@ -37,7 +37,7 @@ string ostatniaLiterka = text.Substring(dlugoscTextu - 1, 1);
 Console.WriteLine($"Pierwsza literka to: {pierwszaLiterka}");
 Console.WriteLine($"Ostatnia literka to: {ostatniaLiterka}");*/
 //3 Zadanie
-Console.WriteLine("Podaj Text:");
+/*Console.WriteLine("Podaj Text:");
 string text = Console.ReadLine();
 int dlugoscTextu = text.Length;
 char znak;
@@ -51,7 +51,14 @@ for (int i = 0; i < text.Length; i++)
         input++;
     }
 }
-Console.WriteLine($"Znak '{znak}' występuje w podanym tekście '{input}' razy.");
+Console.WriteLine($"Znak '{znak}' występuje w podanym tekście '{input}' razy.");*/
+//4 Zadanie
+Console.WriteLine("Podaj Text:");
+string text = Console.ReadLine();
+Console.WriteLine("Wybiez znak na jaki chcesz zamienic spacje:");
+char znak = Convert.ToChar(Console.ReadLine());
+text = text.Replace(' ', znak); 
+Console.WriteLine($"Tekst po zmianie spacji na podkreślnik: {text}");
 
 
 
