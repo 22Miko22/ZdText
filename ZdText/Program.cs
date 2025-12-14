@@ -1,25 +1,25 @@
 ﻿
 int liczbaLiterek; 
 Console.WriteLine("Wybierz rodzaj literek.");
-Console.WriteLine($"A - to male  B - to duże");
+Console.WriteLine($"A - to male  B - to duże C - to pierwsza duża");
 string rodzajLiterek = Console.ReadLine();
 string slowo;
 Console.WriteLine("Podaj słowo");
 slowo = Console.ReadLine();
 if (rodzajLiterek == "A")
 {
-   Console.WriteLine("Wybrałeś małe literki.");
+   Console.WriteLine("Wybrałeś - małe literki.");
     slowo = slowo.ToLower();
 }
 else if (rodzajLiterek == "B")
 {
-    Console.WriteLine("Wybrałeś duże literki.");
+    Console.WriteLine("Wybrałeś - duże literki.");
     slowo = slowo.ToUpper();
 }
-else
+else if(rodzajLiterek == "C" && slowo.Length > 0)
 {
-    Console.WriteLine("Nieprawidłowy wybór, domyślnie ustawiono małe literki.");
-    rodzajLiterek = "A";
+    Console.WriteLine("Wybrałeś - pierwsza duża.");
+    slowo = char.ToUpper(slowo[0])+slowo.Substring(1).ToLower();
 }
 
 liczbaLiterek = slowo.Length;
