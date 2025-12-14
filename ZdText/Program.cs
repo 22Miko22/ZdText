@@ -26,7 +26,7 @@ liczbaLiterek = slowo.Length;
 Console.WriteLine($"Twoje słowo to: {slowo}");
 Console.WriteLine($"Liczba literek w Twoim słowie to: {liczbaLiterek}");*/
 //2 Zadanie
-Console.WriteLine("Podaj Text:");
+/*Console.WriteLine("Podaj Text:");
 string text = Console.ReadLine();
 text = text.Trim();
 int dlugoscTextu = text.Length;
@@ -35,6 +35,25 @@ Console.WriteLine($"Długość tekstu bez spacji na początku i na końcu: {dlug
 string pierwszaLiterka = text.Substring(0,1);
 string ostatniaLiterka = text.Substring(dlugoscTextu - 1, 1);
 Console.WriteLine($"Pierwsza literka to: {pierwszaLiterka}");
-Console.WriteLine($"Ostatnia literka to: {ostatniaLiterka}");
+Console.WriteLine($"Ostatnia literka to: {ostatniaLiterka}");*/
+//3 Zadanie
+Console.WriteLine("Podaj Text:");
+string text = Console.ReadLine();
+int dlugoscTextu = text.Length;
+char znak;
+int input = 0;
+Console.WriteLine("Podaj znak jaki chcesz policzyć");
+znak = Convert.ToChar(Console.ReadLine());
+for (int i = 0; i < text.Length; i++)   
+{
+    if (znak == text[i])
+    {
+        input++;
+    }
+}
+Console.WriteLine($"Znak '{znak}' występuje w podanym tekście '{input}' razy.");
+
+
+
 
 
